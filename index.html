@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hamza Anjum — Full-Stack Developer</title>
+<meta name="description" content="Hamza Anjum is a full-stack developer building web apps, mobile apps, and games — available for freelance and contract projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #101418;
+    --bg2: #171d23;
+    --line: #2a333d;
+    --text: #e8eaec;
+    --muted: #9aa5ae;
+    --accent: #4fd1a5;
+    --accent-dim: #2c6e58;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  .frame { max-width: 840px; margin: 0 auto; padding: 0 28px; }
+
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  header {
+    padding: 100px 0 72px;
+    border-bottom: 1px solid var(--line);
+  }
+  .avail {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--accent);
+    border: 1px solid var(--accent-dim);
+    border-radius: 999px;
+    padding: 5px 14px;
+    margin-bottom: 26px;
+  }
+  .avail::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 8px var(--accent);
+  }
+  h1 {
+    font-family: Fraunces, serif;
+    font-weight: 640;
+    font-size: clamp(2.6rem, 8vw, 4.2rem);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  h1 .accent { color: var(--accent); }
+  .lede {
+    font-size: 1.12rem;
+    color: var(--muted);
+    max-width: 36em;
+    margin-bottom: 30px;
+  }
+  .lede strong { color: var(--text); font-weight: 500; }
+  .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.98rem;
+    background: var(--accent);
+    color: #08110d;
+  }
+  .btn:hover { text-decoration: none; filter: brightness(1.08); }
+  .btn.ghost {
+    background: none;
+    color: var(--text);
+    box-shadow: inset 0 0 0 1px var(--line);
+  }
+
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  h2 {
+    font-family: Fraunces, serif;
+    font-weight: 560;
+    font-size: 1.6rem;
+    margin: 8px 0 34px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  .card {
+    background: var(--bg2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 24px 26px;
+  }
+  .card h3 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .card p { color: var(--muted); font-size: 0.95rem; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; max-width: 44em; }
+  .chip {
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--text);
+    background: var(--bg2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 16px;
+  }
+
+  .work {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 24px;
+    align-items: center;
+    background: var(--bg2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 26px 28px;
+  }
+  .work h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; }
+  .work p { color: var(--muted); font-size: 0.95rem; max-width: 34em; }
+  .work .links { white-space: nowrap; }
+  .work + .note { margin-top: 18px; color: var(--muted); font-size: 0.92rem; }
+
+  footer { padding: 64px 0 80px; }
+  footer p { color: var(--muted); margin-bottom: 10px; }
+  footer .big {
+    font-family: Fraunces, serif;
+    font-size: 1.5rem;
+    color: var(--text);
+    margin-bottom: 18px;
+  }
+  .fine { margin-top: 40px; font-size: 0.85rem; opacity: 0.65; }
+
+  @media (max-width: 620px) {
+    header { padding: 72px 0 56px; }
+    .grid { grid-template-columns: 1fr; }
+    .work { grid-template-columns: 1fr; }
+    .work .links { white-space: normal; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    header > .frame > * { animation: rise 0.6s ease both; }
+    header > .frame > *:nth-child(2) { animation-delay: 0.07s; }
+    header > .frame > *:nth-child(3) { animation-delay: 0.14s; }
+    header > .frame > *:nth-child(4) { animation-delay: 0.21s; }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: none; }
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="frame">
+    <div class="avail">Available for projects</div>
+    <h1>Hamza Anjum<br><span class="accent">Full-Stack Developer</span></h1>
+    <p class="lede">I take products from <strong>idea to shipped</strong> — frontend, backend,
+    mobile, and everything that keeps them running. Comfortable owning a project end to end
+    or slotting into an existing team.</p>
+    <div class="btn-row">
+      <a class="btn" href="mailto:hamza.anjum@gmail.com">Get in touch</a>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="frame">
+    <div class="eyebrow">What I do</div>
+    <h2>End to end, any layer</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Web applications</h3>
+        <p>Frontends that feel fast and backends that stay up — SPAs, dashboards,
+        APIs, auth, payments, and the data models underneath.</p>
+      </div>
+      <div class="card">
+        <h3>Mobile apps</h3>
+        <p>Android and cross-platform apps, from first build to store listing,
+        release management, and post-launch iteration.</p>
+      </div>
+      <div class="card">
+        <h3>Games &amp; interactive</h3>
+        <p>Gameplay systems, tooling, and polish — I've shipped a puzzle game
+        solo, from engine code to Play Store.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud &amp; delivery</h3>
+        <p>CI/CD pipelines, cloud deployment, and the pragmatic DevOps that keeps
+        small teams shipping without ceremony.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="frame">
+    <div class="eyebrow">Toolbox</div>
+    <h2>Technologies I reach for</h2>
+    <div class="chips">
+      <span class="chip">JavaScript / TypeScript</span>
+      <span class="chip">React</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">.NET / C#</span>
+      <span class="chip">Python</span>
+      <span class="chip">SQL &amp; NoSQL</span>
+      <span class="chip">Android</span>
+      <span class="chip">Flutter</span>
+      <span class="chip">Godot</span>
+      <span class="chip">Azure</span>
+      <span class="chip">Docker</span>
+      <span class="chip">CI/CD</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="frame">
+    <div class="eyebrow">Side project</div>
+    <h2>Built for fun: Potion Lab</h2>
+    <div class="work">
+      <div>
+        <h3>Potion Lab — a puzzle game for Android</h3>
+        <p>A weekends-and-evenings project I took all the way to the Play Store:
+        custom puzzle engine with a solver that proves every level fair, in-app
+        purchases, achievements, and a full release pipeline — designed and built solo.</p>
+      </div>
+      <div class="links"><a href="https://hamzaanjum.github.io/potion-lab/">Visit site →</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="frame">
+    <div class="eyebrow">Contact</div>
+    <p class="big">Have a project in mind?</p>
+    <p>Email: <a href="mailto:hamza.anjum@gmail.com">hamza.anjum@gmail.com</a></p>
+    <p class="fine">© 2026 Hamza Anjum</p>
+  </div>
+</footer>
+
+</body>
+</html>
